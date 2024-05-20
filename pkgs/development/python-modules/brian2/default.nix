@@ -6,6 +6,8 @@
 , numpy
 , pyparsing
 , setuptools
+, setuptools-scm
+, oldest-supported-numpy
 , sympy
 , pytest
 , pytest-xdist
@@ -15,13 +17,18 @@
 buildPythonPackage rec {
   pname = "brian2";
   version = "2.6.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "Brian2";
     inherit version;
     hash = "sha256-qYeIMn8l2V2Ckpj5AY7TWihFnfZ//JcP5VacUUfYCf4=";
   };
+
+  nativeBuildInputs = [
+    setuptools-scm
+    oldest-supported-numpy
+  ];
 
   propagatedBuildInputs = [
     cython
