@@ -7,16 +7,16 @@
 
 php.buildComposerProject2 (finalAttrs: {
   pname = "phpstan";
-  version = "2.1.31";
+  version = "2.1.29";
 
   src = fetchFromGitHub {
     owner = "phpstan";
     repo = "phpstan-src";
     tag = finalAttrs.version;
-    hash = "sha256-vQTZ59qEqZYLoh8eAX+wqBvLTHKTvMIOkFDfuEG9k9M=";
+    hash = "sha256-8HPMXJ64qkV6fXfdr6fZTp2m1EhcWiq0cE51VQHuyro=";
   };
 
-  vendorHash = "sha256-ysGcIpsYpZSuysG5Fw5IVSyO/GSnAkF79GnPF8Dttpk=";
+  vendorHash = "sha256-mSlxWkqhniphYUOjE0zucOqN9gKe3Th0GEikB7DyYVY=";
   composerStrictValidation = false;
 
   doInstallCheck = true;
